@@ -91,9 +91,6 @@
                                 </state>
                                 <connections>
                                     <action selector="generateNickname:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Fw-0z-hao"/>
-                                    <segue destination="lAK-eK-Ndp" kind="popoverPresentation" identifier="ToDetailVC" popoverAnchorView="cLd-cy-fC4" id="GRK-Ca-7V4">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,6 +111,7 @@
                         <outlet property="done" destination="cLd-cy-fC4" id="l4w-Iz-5ET"/>
                         <outlet property="food" destination="lA9-4t-nDv" id="t7n-mj-R5o"/>
                         <outlet property="name" destination="qcr-tT-vqt" id="4IT-7k-8eX"/>
+                        <segue destination="lAK-eK-Ndp" kind="show" identifier="ToDetailVC" id="s49-LG-UDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,7 +150,7 @@
                     </view>
                     <connections>
                         <outlet property="img" destination="3NB-so-GRK" id="br3-rf-1h0"/>
-                        <outlet property="nickName" destination="H18-ra-K7t" id="V7B-5A-MVL"/>
+                        <outlet property="nickname" destination="H18-ra-K7t" id="VKt-5X-BWS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJz-7l-KD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
