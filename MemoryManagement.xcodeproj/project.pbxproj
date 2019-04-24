@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FB45E03D2FD91FDED2BCAB3 /* Pods_MemoryManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4239DFF19F59FC9FB17E3590 /* Pods_MemoryManagement.framework */; };
 		F142F9DB22655C7200AC1A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142F9DA22655C7200AC1A7B /* AppDelegate.swift */; };
 		F142F9DD22655C7200AC1A7B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142F9DC22655C7200AC1A7B /* MainVC.swift */; };
 		F142F9E022655C7200AC1A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F142F9DE22655C7200AC1A7B /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AF2422A09B14A2C7089624B /* Pods-MemoryManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryManagement/Pods-MemoryManagement.debug.xcconfig"; sourceTree = "<group>"; };
+		4239DFF19F59FC9FB17E3590 /* Pods_MemoryManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A547EE7A1553074F0959C13C /* Pods-MemoryManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryManagement/Pods-MemoryManagement.release.xcconfig"; sourceTree = "<group>"; };
 		F142F9D722655C7200AC1A7B /* MemoryManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142F9DA22655C7200AC1A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F142F9DC22655C7200AC1A7B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB45E03D2FD91FDED2BCAB3 /* Pods_MemoryManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28FD7D697A8E29F40F170B92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4239DFF19F59FC9FB17E3590 /* Pods_MemoryManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58656C1C400088D65C5894E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AF2422A09B14A2C7089624B /* Pods-MemoryManagement.debug.xcconfig */,
+				A547EE7A1553074F0959C13C /* Pods-MemoryManagement.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F142F9CE22655C7200AC1A7B = {
 			isa = PBXGroup;
 			children = (
 				F142F9D922655C7200AC1A7B /* MemoryManagement */,
 				F142F9D822655C7200AC1A7B /* Products */,
+				58656C1C400088D65C5894E1 /* Pods */,
+				28FD7D697A8E29F40F170B92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F142F9E922655C7300AC1A7B /* Build configuration list for PBXNativeTarget "MemoryManagement" */;
 			buildPhases = (
+				F186100322702BA2005023D5 /* ShellScript */,
+				4E72919D3461C018A30EB401 /* [CP] Check Pods Manifest.lock */,
 				F142F9D322655C7200AC1A7B /* Sources */,
 				F142F9D422655C7200AC1A7B /* Frameworks */,
 				F142F9D522655C7200AC1A7B /* Resources */,
@@ -132,6 +158,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E72919D3461C018A30EB401 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoryManagement-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F186100322702BA2005023D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F142F9D322655C7200AC1A7B /* Sources */ = {
@@ -284,6 +348,7 @@
 		};
 		F142F9EA22655C7300AC1A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AF2422A09B14A2C7089624B /* Pods-MemoryManagement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +367,7 @@
 		};
 		F142F9EB22655C7300AC1A7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A547EE7A1553074F0959C13C /* Pods-MemoryManagement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

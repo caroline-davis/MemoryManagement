@@ -11,23 +11,15 @@ import UIKit
 class DetailVC: UIViewController {
 
     @IBOutlet weak var nickname: UILabel!
-    
     @IBOutlet weak var img: UIImageView!
 
      var generatedName: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         nickname.text = generatedName
 
     }
-    
-    
     deinit {
         print("deallocating happened")
     }
-
-
 }
